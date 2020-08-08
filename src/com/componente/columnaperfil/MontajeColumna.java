@@ -27,7 +27,7 @@ public class MontajeColumna extends JPanel {
 		final ImagenPerfil imagenPerfil = new ImagenPerfil();
 		final Informacion informacion = new Informacion();		
 		
-		//TODO:: REMOVE THIS SHIT 
+		//TODO:: arreglar luego 
 		final JPanel container = new JPanel(new BorderLayout(10, 10));		
 		container.setBackground(Color.WHITE);		
 		container.add(imagenPerfil, BorderLayout.NORTH);
@@ -51,7 +51,7 @@ public class MontajeColumna extends JPanel {
 			labelcontainer.setIcon(icon);
 								
 			final JPanel container = new JPanel();
-			//container.setBackground(Color.WHITE); this makes the panel logo white   
+			container.setBackground(Color.WHITE); // this makes the panel logo white   
 			container.add(labelcontainer);
 			
 			add(container);
@@ -106,6 +106,14 @@ public class MontajeColumna extends JPanel {
 			
 		}
 		
+		
+		/**
+		 * 
+		 * @param texto
+		 * @param font
+		 * @param color
+		 * @return
+		 */
 		private final TitledBorder getTitledBorder(String texto, Font font, Color color) {
 			final TitledBorder titledSkills = new TitledBorder(texto); 
 			titledSkills.setTitleFont(font);
@@ -113,6 +121,12 @@ public class MontajeColumna extends JPanel {
 			return titledSkills;
 		}
 		
+		
+		/**
+		 * 
+		 * @param font
+		 * @return
+		 */
 		private final JPanel panelWork(Font font) {
 			
 			final JPanel panel = new JPanel(new GridLayout(0, 1, 10, 10)); 			
@@ -143,6 +157,13 @@ public class MontajeColumna extends JPanel {
 			
 		}
 		
+		
+		/**
+		 * 
+		 * @param skills
+		 * @param font
+		 * @return
+		 */
 		private final JPanel panelSkills(String[] skills, Font font) {
 			
 			final JLabel[] labels = new JLabel[skills.length];
@@ -159,12 +180,7 @@ public class MontajeColumna extends JPanel {
 			}
 			
 			return panel;
-			
-			
-		}
-		
-		
+					
+		}		
 	}
-
-	
 }

@@ -28,13 +28,17 @@ public class SubPanel extends JPanel {
 		
 		super(new BorderLayout());		
 		
-		final Tabbed tabbed = new Tabbed();
-		final JPanel subPanelDos = new SubPanelDos();		
+		final LayoutManager flow = new FlowLayout(FlowLayout.LEADING);
 		
-		final JPanel panelcontainerTabbed = new JPanel(new FlowLayout(JLabel.TRAILING));  
+		final JPanel panelcontainerSubPanelDos = new JPanel(flow);
+		final JPanel subPanelDos = new SubPanelDos();		
+		panelcontainerSubPanelDos.add(subPanelDos);
+		
+		final Tabbed tabbed = new Tabbed();
+		final JPanel panelcontainerTabbed = new JPanel(flow);  
 		panelcontainerTabbed.add(tabbed);
 		
-		add(subPanelDos, BorderLayout.CENTER);
+		add(subPanelDos, BorderLayout.CENTER);  
 		add(panelcontainerTabbed, BorderLayout.SOUTH); 
 		
 	}
@@ -113,7 +117,7 @@ public class SubPanel extends JPanel {
 								
 				
 				// panel who manage contact information labels
-				final String[] contactInfo = new String[] {"+1 234 567 8900", "La Fortuna", "willxdd97@gmail.com", "www.sitecom.dot"}; 
+				final String[] contactInfo = new String[] {"+1 234 567 8900", "La Fortuna", "foo97@gmail.com", "www.sitecom.dot"}; 
 				final String[] contactInformation = new String[] {"Phone", "Adress", "E-mail", "Site"};				
 				final JLabel[] labelsInformation = new JLabel[ contactInformation.length ];
 				final Border titledInfo = getTitledBorder("Contact Information");
