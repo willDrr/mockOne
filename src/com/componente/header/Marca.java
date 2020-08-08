@@ -40,7 +40,7 @@ public class Marca extends JPanel {
 		final JTextField textField = new RounderBorder().getRounderBorder(20);
 		 
 		
-		final FlowLayout flow = new FlowLayout(FlowLayout.LEFT, 20, 30);
+		final FlowLayout flow = new FlowLayout(FlowLayout.LEFT, 20, 0);
 		final JPanel subPanelContainer = new JPanel(flow);		 
 		subPanelContainer.setOpaque(false);  
 		subPanelContainer.add(panelMarca);
