@@ -1,6 +1,3 @@
-# mockOne
-
-# mockOne
 
 ## Basic Java Swing gui aim to work along with the Twilio Api
 
@@ -11,4 +8,4 @@ TODO ::
 * QR support
 * Refactor
 
-![Image of first step](https://github.com/willDrr/mockOne/tree/master/images/steps/Captura de pantalla 2021-01-20 05.56.21.png)
+![Image of first step](https://github.com/willDrr/mockOne/blob/master/images/steps/Captura%20de%20pantalla%202021-01-20%2005.56.21.png)
