@@ -11,4 +11,4 @@ TODO ::
 * QR support
 * Refactor
 
-![alt text](https://github.com/[willDrr]/[mockOne]/blob/[master]/Captura de pantalla 2021-01-20 05.56.21.png?raw=true)
+![Image of first step](https://github.com/willDrr/mockOne/tree/master/images/steps/Captura de pantalla 2021-01-20 05.56.21.png)
