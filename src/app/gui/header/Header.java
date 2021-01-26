@@ -7,6 +7,9 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -19,6 +22,7 @@ import app.gui.builder.BuilderLabel;
 import app.gui.builder.BuilderPanel;
 import app.gui.builder.BuilderTextField;
 import app.gui.builder.JPanelTemplate;
+import app.gui.mainpanel.SubPanelToggle;
 
 public class Header extends JPanelTemplate {
 	
@@ -41,7 +45,7 @@ public class Header extends JPanelTemplate {
 		BORDER = new EmptyBorder(inset, inset, inset, inset);
 	}
 	
-	public Header() {
+	public Header(SubPanelToggle subPanelToggle) {
 		
 		super(MANAGER, COLOR_TWILIO, BORDER); 
 		
@@ -76,10 +80,26 @@ public class Header extends JPanelTemplate {
 		
 		
 		// components for the second panel
+		
+		final MouseListener mouseAdapter = new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {			
+				super.mouseClicked(e);
+				
+				JLabel label = (JLabel) e.getSource();
+				
+				if ( label.getText().equals(Labels.Find_people.text())) { 
+					SubPanelToggle.cardlayout.show(subPanelToggle, "panel_landing");  
+				}
+				
+			}
+		};
+		
 		final JLabel labelFindPeople = new BuilderLabel.LabelBuilder()
 				.text(Labels.Find_people.text())
 				.foreground(WHITE)
 				.font(fontMontserratBold)
+				.mouseListener(mouseAdapter)
 				.build();
 
 		final JLabel labelMessages = new BuilderLabel.LabelBuilder()

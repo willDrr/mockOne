@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 import app.gui.builder.JPanelTemplate;
 import app.model.Person;
 
-public class PanelInfoGeneric <T extends Person> extends JPanelTemplate {
+public abstract class PanelInfoGeneric <T extends Person> extends JPanelTemplate {
 
 	/**
 	 * 

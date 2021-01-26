@@ -1,13 +1,11 @@
 package app.gui.mainpanel;
 
+import static java.awt.Color.WHITE;
+
 import java.awt.BorderLayout;
-import java.util.Date;
 
 import app.gui.builder.JPanelTemplate;
 import app.gui.header.Header;
-import app.gui.panels_info.central_part.PanelDetailedInfoWork;
-import app.gui.panels_info.left_part.LeftColumn;
-import app.model.User;
 
 public class SubPanel extends JPanelTemplate {
 	
@@ -19,19 +17,15 @@ public class SubPanel extends JPanelTemplate {
 	public SubPanel() { 
 		
 		
-		super(new BorderLayout());
+		super(new BorderLayout(), WHITE);
 				
-		super.add(new Header(), BorderLayout.NORTH); 
+		final SubPanelToggle subPanelToggle = new SubPanelToggle();
 		
+		final Header header = new Header(subPanelToggle);
 		
-		/**
-		 * 
-		 */
-		final User user = new User("wilder", "foobar@gmail.com", "foobar", new Date() , "M", false);
+		super.add(header, BorderLayout.NORTH); 
 		
-		super.add(new LeftColumn(user), BorderLayout.WEST); 
-		
-		super.add(new PanelDetailedInfoWork(user), BorderLayout.CENTER); 
+		super.add(subPanelToggle, BorderLayout.CENTER);
 		
 	}
 
